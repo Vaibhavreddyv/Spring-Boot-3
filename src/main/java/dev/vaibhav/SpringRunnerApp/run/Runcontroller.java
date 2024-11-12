@@ -29,7 +29,7 @@ public class Runcontroller {
 
         Optional<Run> r = runRepository.findbyid(id);
         if (r.isEmpty()) {
-            throw new RunNotFoundException();
+            throw new RunNotFoundException("Student is not_found "+ id );
         }
         return r.get();
     }
